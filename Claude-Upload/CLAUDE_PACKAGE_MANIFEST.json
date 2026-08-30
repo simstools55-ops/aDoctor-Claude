@@ -1,0 +1,20 @@
+{
+  "package_name": "SIMS-Article-Doctor-Claude",
+  "package_version": "1.4.4",
+  "product_code": "DOCTOR",
+  "compatible_product_versions": [
+    "1.4.1"
+  ],
+  "platform_compatibility": "1.x",
+  "shared_version": "3.5.0",
+  "supported_contracts": [
+    "SIMS_DOCTOR_DIAGNOSIS_REQUEST_V1",
+    "SIMS_DOCTOR_DIAGNOSIS_RESULT_V1",
+    "SIMS_DOCTOR_ALGORITHM_IMPACT_ASSESSMENT_V1"
+  ],
+  "legacy_compatibility": [
+    "SIMS_DOCTOR_CASE_RESULT_V2"
+  ],
+  "deployment_method": "Claude-Upload",
+  "generated_at": "2026-08-07T19:35:00+09:00"
+}

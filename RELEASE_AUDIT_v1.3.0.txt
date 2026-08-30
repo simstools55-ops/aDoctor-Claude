@@ -1,0 +1,14 @@
+SIMS Article Doctor Claude v1.3.0 Release Audit
+Date: 2026-08-29
+
+Version policy: MINOR
+Reason: Personal Knowledge separation from distributable manual-Claude package.
+
+Checks
+- Full Claude package test suite: PASS — 14 passed
+- Known tenant/blog markers: PASS
+- Known owner-specific operational IDs: none retained
+- Root/Claude-Upload synthetic example synchronized: PASS
+- Product/package version: 1.3.0
+- Shared compatibility baseline: 3.5.0
+- Manual Claude workflow preserved; Claude API remains absent.

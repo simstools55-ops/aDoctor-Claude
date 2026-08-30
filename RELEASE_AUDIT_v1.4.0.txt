@@ -1,0 +1,1 @@
+Article Doctor Claude v1.4.0: Personal Knowledge candidate contract added; manual Claude workflow preserved; Shared baseline unchanged.
