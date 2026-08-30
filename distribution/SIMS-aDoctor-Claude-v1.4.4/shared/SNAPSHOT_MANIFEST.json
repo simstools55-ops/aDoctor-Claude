@@ -1,0 +1,26 @@
+{
+  "shared_version": "3.4.0",
+  "snapshot_for": "DOCTOR_CLAUDE",
+  "generated_at": "2026-08-07T17:00:00+09:00",
+  "included_paths": [
+    "contracts/common",
+    "contracts/doctor",
+    "contracts/platform/platform-error-v1.schema.json",
+    "doctor/TREATMENT_ROUTING_V1.md",
+    "doctor/SBM_DOCTOR_SAFETY_BOUNDARY.md",
+    "enums/diagnosis-code.json",
+    "enums/treatment-type.json",
+    "enums/result-status.json",
+    "enums/priority.json",
+    "enums/product-code.json"
+  ],
+  "excluded_paths": [
+    "runtime/writer",
+    "runtime/creator",
+    "runtime/merge"
+  ],
+  "compatible_product_versions": [
+    "1.0.2",
+    "1.0.3"
+  ]
+}
