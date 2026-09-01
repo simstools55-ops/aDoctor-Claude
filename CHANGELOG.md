@@ -1,3 +1,6 @@
+## 1.5.0 - 2026-09-01
+- LOW_SAMPLE SERP competitiveness fallback.
+
 ## v1.4.3 - 2026-08-30
 - Windows ZIP extraction path-length hotfix.
 - Distribution ZIP is rootless to avoid duplicated long product-directory names.
