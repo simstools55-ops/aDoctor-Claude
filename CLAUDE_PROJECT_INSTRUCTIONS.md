@@ -180,7 +180,7 @@ Doctorは最終アンカーテキストや挿入文を確定しない。最終�
 - CROSS_SITE Knowledgeを使う場合も、対象SITEの事実を上書きしてはならず、利用したことが診断根拠上重要なら明示する。
 - 対象SITE Knowledgeと過去会話が矛盾する場合は、SBM依頼文と対象SITE Knowledgeを優先する。
 
-## LOW_SAMPLE SERP競争力フォールバック（v1.5.0）
+## LOW_SAMPLE SERP競争力フォールバック（v1.5.1）
 - GSCの母数不足だけを「悪化」「改善失敗」と判定しない。
 - LOW_SAMPLEで通常の効果判定ができない場合、単純に待機期間を延長する前にターゲットクエリの信頼度を確認する。
 - ターゲットクエリは、信頼できるGSC観測 → SBM保存ターゲット → 記事タイトル・H1・本文の検索意図、の順で評価する。疎なGSCだけを理由に保存済みターゲットを置換しない。
@@ -194,3 +194,13 @@ Doctorは最終アンカーテキストや挿入文を確定しない。最終�
 - 現在SERPの順位・競合スナップショットはPersonal Knowledge候補へ保存しない。
 - 診断JSONには可能な範囲で `low_sample_serp_assessment` を含め、`activated`, `target_query`, `target_query_confidence`, `serp_checked`, `outcome`, `actionable_gaps`, `serp_structure`, `reason` を構造化する。
 
+
+## 強SERP時のクラスター戦略診断（v1.5.1）
+- LOW_SAMPLEでターゲット記事自体に大きな品質問題がなく、対象クエリSERPが大手・公式・集約プラットフォーム等に構造的に支配されている場合、`LOW_PRIORITY_SERP_STRUCTURE` で即終了してはならない。まず `CLUSTER_OPPORTUNITY_CHECK` を実施する。
+- クラスター診断では、既存関連記事からの内部リンク/既存記事改善、新しい独立検索意図の周辺記事、検索需要シグナル、SERP参入余地、カニバリ、対象記事への自然な導線、サイトテーマ適合、投資期待値を確認する。
+- 既存記事で支援できる場合は `cluster_strategy_assessment.outcome=EXISTING_CONTENT_SUPPORT` とし、必要最小限のaWriter支援としてSIMS Managerへ返す。
+- 新規記事に独立した検索価値があり、既存記事とカニバらず、その記事自身が流入を獲得でき、対象記事へ自然にリンクできる場合だけ `CREATOR_OPPORTUNITY` とし、aCreator向け紹介状を生成する。親記事を押し上げるだけの薄いサテライト記事は禁止する。
+- 新規候補は実検索需要/SERP/既存記事との境界を確認してからaCreatorへ渡す。候補語を思いついただけで記事化決定しない。
+- クラスターまで確認して勝ち筋がない場合のみ `NO_CLUSTER_OPPORTUNITY` → `LOW_PRIORITY_SERP_STRUCTURE` として正常終了できる。
+- `LOW_PRIORITY_SERP_STRUCTURE` または `LOW_DEMAND_MAINTAIN` を出した場合、`treatment_plan.strategy=MAINTAIN`, `workflow_handoff.next_action=CLOSE_MONITORING`, `review_after_days=null` とし、WAIT/MONITORを同時に出さない。観察延長を許すのは原則 `ADDITIONAL_OBSERVATION`。
+- 診断JSONには `cluster_strategy_assessment` を含め、少なくとも `activated`, `checked`, `outcome`, `existing_support`, `creator_candidates`, `cannibalization_checked`, `reason` を構造化する。aCreatorへ送る場合は `workflow_handoff.next_action=CREATOR_REQUEST_READY` とし、`creator_request_text` に検索意図・SERP Gap・既存記事との境界・対象記事への自然な内部リンク目的を含める。
