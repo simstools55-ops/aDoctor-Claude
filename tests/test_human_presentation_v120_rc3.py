@@ -3,7 +3,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 def test_versions():
-    assert (ROOT/'VERSION').read_text().strip()=='1.4.4'
+    assert (ROOT/'VERSION').read_text().strip()=='1.5.1'
     assert (ROOT/'SHARED_VERSION').read_text().strip()=='3.5.0'
 
 def test_presentation_docs_present():

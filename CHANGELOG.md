@@ -1,6 +1,7 @@
-- v1.5.1-dev: Added cluster-opportunity diagnosis and aCreator routing for LOW_SAMPLE hard-SERP cases.
-## 1.5.1 - 2026-09-01
-- LOW_SAMPLE SERP competitiveness fallback.
+## 1.5.1 - 2026-09-05
+- Added cluster-opportunity diagnosis and aCreator routing for LOW_SAMPLE hard-SERP cases.
+- Added LOW_SAMPLE SERP competitiveness fallback.
+- Synchronized release-facing repository and distribution metadata for formal repository use.
 
 ## v1.4.3 - 2026-08-30
 - Windows ZIP extraction path-length hotfix.

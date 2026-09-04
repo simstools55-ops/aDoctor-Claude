@@ -1,12 +1,12 @@
 {
   "version": "1.5.1",
-  "generated_at": "2026-09-04T09:29:41+09:00",
-  "file_count": 686,
+  "generated_at": "2026-09-05T08:35:00+09:00",
+  "file_count": 688,
   "files": [
     {
       "path": "CHANGELOG.md",
-      "sha256": "c9dd1ac4f4c964186eefb0f96ef6e5b42438e88e70d28a0585ffd0b1f75db97a",
-      "size": 23616
+      "sha256": "4f6a297a1b522c40ffd189430c84ea33fbf4f869cc4afb504572263a1b02991a",
+      "size": 23704
     },
     {
       "path": "CLAUDE_DEPLOYMENT_MANIFEST.json",
@@ -627,6 +627,11 @@
       "path": "Claude-Upload/RELEASE_NOTES_v1.4.4.md",
       "sha256": "960c2561cee82e81a8da70eec599c6e9d419295c9737e997bfb536d781abfbbe",
       "size": 555
+    },
+    {
+      "path": "Claude-Upload/RELEASE_NOTES_v1.5.1.md",
+      "sha256": "7119bc10b5a913b2528416d778f3c75271c503fc313eb73dd92389666cbac778",
+      "size": 632
     },
     {
       "path": "Claude-Upload/Runtime/CLINICAL_RUNTIME.md",
@@ -1835,13 +1840,13 @@
     },
     {
       "path": "RELEASE_NOTES_v1.5.0.md",
-      "sha256": "b7c69ae18404167ce2eab3daa42b3929387068f25da902efcc485990c22b20aa",
+      "sha256": "62826ad94c492959851a3353c4e93ed7a74558e091f290a199f8da59154a9294",
       "size": 463
     },
     {
       "path": "RELEASE_NOTES_v1.5.1.md",
-      "sha256": "43a2a6f57c0add6b42723976ee75f7fe475cbdb3040b136dd8035f06e7908170",
-      "size": 442
+      "sha256": "7119bc10b5a913b2528416d778f3c75271c503fc313eb73dd92389666cbac778",
+      "size": 632
     },
     {
       "path": "Runtime/CLINICAL_RUNTIME.md",
@@ -2790,8 +2795,8 @@
     },
     {
       "path": "distribution/SIMS-aDoctor-Claude-v1.5.1/README-FIRST.md",
-      "sha256": "deb8a5646cfb19d9c19b88e3b0221b2dfabcd941d9d980c50e420447171281d4",
-      "size": 242
+      "sha256": "85847c99dd09c899a2f7f1658fbab8dcb7613bd5e9e2f38fc51037b9098edf98",
+      "size": 448
     },
     {
       "path": "distribution/SIMS-aDoctor-Claude-v1.5.1/README.md",
@@ -2810,8 +2815,13 @@
     },
     {
       "path": "distribution/SIMS-aDoctor-Claude-v1.5.1/RELEASE_NOTES_v1.5.0.md",
-      "sha256": "b7c69ae18404167ce2eab3daa42b3929387068f25da902efcc485990c22b20aa",
+      "sha256": "62826ad94c492959851a3353c4e93ed7a74558e091f290a199f8da59154a9294",
       "size": 463
+    },
+    {
+      "path": "distribution/SIMS-aDoctor-Claude-v1.5.1/RELEASE_NOTES_v1.5.1.md",
+      "sha256": "7119bc10b5a913b2528416d778f3c75271c503fc313eb73dd92389666cbac778",
+      "size": 632
     },
     {
       "path": "distribution/SIMS-aDoctor-Claude-v1.5.1/Runtime/CLINICAL_RUNTIME.md",
@@ -3395,7 +3405,7 @@
     },
     {
       "path": "tests/test_human_presentation_v120_rc3.py",
-      "sha256": "9d331d24e5fd7a7bb01c80e1fe23489ed62d9cff22c40498382e005f486c3af0",
+      "sha256": "dd24b0f3dc3e66788f4b2ef57837aba2785d2a9805b4d33e36cae5a804ab0df9",
       "size": 1458
     },
     {
@@ -3410,12 +3420,12 @@
     },
     {
       "path": "tests/test_rc4_internal_link_referral.py",
-      "sha256": "9e42b6f10a1d6d643c5708af0a13e016e1e0d9dca9af378befc9ddfce9837566",
+      "sha256": "75bffbfb6597cd535ba12abcba93bbc75bcfb8a63acbc85e022d973ba7f28780",
       "size": 689
     },
     {
       "path": "tests/test_release_identity.py",
-      "sha256": "53d493521fcd8dd0b6da64f5a5a738d1a76633ff627eb914af1783a323474439",
+      "sha256": "94adb2d7a9df774d87b5e0420da73d08ab4a1022c499500bb6db5e9874763a96",
       "size": 993
     },
     {
@@ -3430,8 +3440,8 @@
     },
     {
       "path": "tests/test_windows_distribution_paths_v143.py",
-      "sha256": "ca2b44e7809186e75f068d0974c9676414b0e491c0dfaf973fcf41aa25755ff7",
-      "size": 825
+      "sha256": "f2bdc4264a605eda22bde7e5eb700fd75a24da39b81c09a34cd486a7bb146469",
+      "size": 897
     }
   ]
 }

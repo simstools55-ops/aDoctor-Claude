@@ -1,6 +1,7 @@
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[1]
+ROOT = REPO_ROOT / 'distribution' / 'SIMS-aDoctor-Claude-v1.5.1'
 MAX_INTERNAL_PATH = 100
 
 
@@ -13,9 +14,11 @@ def _distribution_files():
             continue
         yield p
 
+
 def test_distribution_has_no_python_cache_artifacts():
     bad = [p for p in ROOT.rglob('*') if p.is_file() and ('.pytest_cache' in p.parts or '__pycache__' in p.parts or p.suffix == '.pyc')]
     assert not bad
+
 
 def test_distribution_internal_paths_are_windows_safe():
     paths = [p.relative_to(ROOT).as_posix() for p in _distribution_files()]
