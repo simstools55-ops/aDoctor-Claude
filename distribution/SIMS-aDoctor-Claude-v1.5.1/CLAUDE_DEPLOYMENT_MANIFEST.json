@@ -1,7 +1,7 @@
 {
   "deployment_manifest_version": "1.0",
   "package_name": "SIMS-Article-Doctor-Claude",
-  "package_version": "1.4.4",
+  "package_version": "1.5.1",
   "product_code": "DOCTOR",
   "shared_version": "3.5.0",
   "platform_compatibility": "1.x",
@@ -29,5 +29,5 @@
     "shared/VERSION",
     "legacy Shared snapshots earlier than 3.3.0"
   ],
-  "generated_at": "2026-08-07T19:35:00+09:00"
+  "generated_at": "2026-09-04T09:29:41+09:00"
 }

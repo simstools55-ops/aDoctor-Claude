@@ -1,10 +1,17 @@
-# aDoctor Claude v1.4.4
+# aDoctor Claude v1.5.1
 
 aDoctorのClaude Project版です。SIMS Managerから受け取った1記事のEvidence Packageを精密診断し、`SIMS_DOCTOR_CASE_RESULT_V2` をSBMへ返します。Writer / Creator / Mergeへの最終紹介状生成はSBMが担当します。
 
 ## Current release
 
-`1.4.3`
+`1.5.1`
+
+### v1.5.1
+
+- LOW_SAMPLE + structurally hard SERP now triggers `CLUSTER_OPPORTUNITY_CHECK` before low-priority closure.
+- Added existing-content support and aCreator opportunity routes.
+- New articles must have independent search intent/user value and pass cannibalization/SERP checks; thin link-only satellites are prohibited.
+- Enforced workflow consistency: normal-close outcomes cannot simultaneously request WAIT/MONITOR.
 
 
 ### v1.4.3

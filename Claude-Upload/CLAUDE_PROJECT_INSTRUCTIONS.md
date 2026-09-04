@@ -1,4 +1,4 @@
-# aDoctor Claude v1.4.4 — Site Primary Doctor
+# aDoctor Claude v1.5.1 — Site Primary Doctor
 
 - Product role: evidence-based diagnosis, treatment decision, reassurance, and return of a machine-readable diagnosis to SBM.
 - Formal workflow: `SBM → Doctor → SBM → Writer / Creator / Merge → SBM`.

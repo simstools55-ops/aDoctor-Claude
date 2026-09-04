@@ -1,9 +1,9 @@
 {
   "package_name": "SIMS-Article-Doctor-Claude",
-  "package_version": "1.4.4",
+  "package_version": "1.5.1",
   "product_code": "DOCTOR",
   "compatible_product_versions": [
-    "1.4.1"
+    "1.5.1"
   ],
   "platform_compatibility": "1.x",
   "shared_version": "3.5.0",
@@ -16,5 +16,5 @@
     "SIMS_DOCTOR_CASE_RESULT_V2"
   ],
   "deployment_method": "Claude-Upload",
-  "generated_at": "2026-08-07T19:35:00+09:00"
+  "generated_at": "2026-09-04T09:29:41+09:00"
 }

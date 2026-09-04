@@ -4,12 +4,12 @@
   "repository_name": "SIMS-Article-Doctor-Claude",
   "repository_type": "CLAUDE_PACKAGE",
   "runtime": "CLAUDE_PROJECT",
-  "package_version": "1.4.4",
-  "product_compatibility": "1.4.1",
+  "package_version": "1.5.1",
+  "product_compatibility": "1.5.1",
   "platform_compatibility": "1.x",
   "shared_version": "3.5.0",
   "compatible_product_versions": [
-    "1.4.1"
+    "1.5.1"
   ],
   "notes": "User-facing naming consolidated to aDoctor / SIMS Manager / site terminology; internal SIMS_DOCTOR contracts and source_product identity unchanged; Shared v3.5.0 preserved."
 }
