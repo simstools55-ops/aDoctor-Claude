@@ -1,25 +1,26 @@
-# SIMS Request Protocol v1 — aDoctor profile
+# SIMS Manager Request Gate v1.5.3
 
 ## Purpose
-SIMS ManagerからaDoctorへ渡された正規依頼文だけを通常運用で受け付けるための運用プロトコル。ライセンス認証・暗号署名ではない。
+Prevent normal aDoctor execution from free-form direct prompts while preserving the existing Manager → Doctor V2 contract. This is an operational gate, not cryptographic authentication.
 
-## Envelope
-```text
-[SIMS_REQUEST]
-PROTOCOL=SIMS-A/1
-SOURCE=SIMS_MANAGER
-EDITION=FULL
-TARGET=ADOCTOR
-REQUEST_TYPE=ARTICLE_DIAGNOSIS
-REQUEST_ID=<required>
-CASE_ID=<required>
-SITE_ID=<required>
-ARTICLE_ID=<required>
-[/SIMS_REQUEST]
-```
+## Canonical accepted request
+The canonical Manager request is the existing JSON contract `SIMS_DOCTOR_SINGLE_CASE_REQUEST_V2`. Do not require a second `[SIMS_REQUEST]` wrapper.
 
-## Validation
-すべての固定値と必須IDを検査し、本文/Evidence側のIDと矛盾する場合は拒否する。拒否時は診断、Web調査、JSON生成を行わない。
+Required values:
+- `format`: `SIMS_DOCTOR_SINGLE_CASE_REQUEST_V2`
+- `contract_version`: `2.0`
+- `schema_version`: `2.0.0`
+- `source_system`: `SIMS_BLOG_MANAGER`
+- `target_system`: `SIMS_DOCTOR`
+- non-empty RequestID: `request.request_id`
+- non-empty CaseID: `case_id` or `request.case_id`
+- non-empty SiteID: `site.site_id`
+- non-empty ArticleID: `article.article_id`
 
-## Boundary
-この方式はClaude Project Instructionsによる運用ゲートであり、Manager発行元を暗号学的に証明しない。Editionの正式な利用権管理はSIMS Manager / License Center側の責務である。
+If an identifier appears in more than one location, values must be consistent.
+
+## Reject
+Reject free-form diagnosis prompts, explanatory text without a valid V2 JSON request, malformed/incomplete V2 requests, source/target mismatches, and the obsolete standalone `[SIMS_REQUEST]` envelope. On rejection, do not diagnose, browse SERP, evaluate the article, or generate diagnosis JSON.
+
+## Security boundary
+This gate discourages standalone use in the Claude Project workflow. It is not a license check, signature, or cryptographic proof that the text originated from Manager.

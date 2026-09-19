@@ -1,0 +1,7 @@
+SIMS aDoctor Claude v1.5.3 RELEASE AUDIT
+PASS
+- Claude request gate aligned to SIMS_DOCTOR_SINGLE_CASE_REQUEST_V2
+- Free-form direct diagnosis remains blocked
+- Obsolete SIMS-A/1 wrapper requirement removed
+- Shared version 3.5.0 preserved
+- pytest: 21 passed

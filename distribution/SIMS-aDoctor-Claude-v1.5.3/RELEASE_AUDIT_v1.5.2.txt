@@ -1,0 +1,11 @@
+SIMS aDoctor Claude v1.5.2 RELEASE AUDIT
+Date: 2026-09-19
+
+Scope: SIMS Request Protocol Gate prototype.
+- VERSION / PRODUCT_IDENTITY / package manifests: 1.5.2
+- Shared Editorial Knowledge: 3.5.0 unchanged
+- License Center dependency: none
+- Existing diagnosis/result contracts: unchanged
+- Gate present in repository and Claude-Upload Project Instructions
+- Fixed rejection behavior documented
+- Security boundary documented: operational prompt gate, not cryptographic authentication

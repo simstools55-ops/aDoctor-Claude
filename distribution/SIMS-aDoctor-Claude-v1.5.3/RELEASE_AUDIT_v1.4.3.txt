@@ -1,0 +1,7 @@
+SIMS Article Doctor Claude v1.4.3 release audit
+Date: 2026-08-30
+Scope: Windows ZIP extraction path hotfix only
+Distribution ZIP: rootless
+Cache artifacts: excluded
+Max internal path guard: <= 100 characters
+Diagnosis/contracts: unchanged from v1.4.2

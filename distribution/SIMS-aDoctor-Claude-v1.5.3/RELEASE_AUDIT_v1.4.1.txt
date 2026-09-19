@@ -1,0 +1,1 @@
+SIMS Article Doctor Claude v1.4.1: instruction version header synchronized; root and Claude-Upload current release surfaces aligned; functional behavior unchanged; Shared baseline 3.5.0 preserved.
