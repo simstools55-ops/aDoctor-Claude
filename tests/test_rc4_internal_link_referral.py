@@ -3,7 +3,7 @@ import json
 ROOT=Path(__file__).resolve().parents[1]
 
 def test_rc4_version_and_contract():
-    assert (ROOT/'VERSION').read_text(encoding='utf-8').strip()=='1.5.1'
+    assert (ROOT/'VERSION').read_text(encoding='utf-8').strip()=='1.5.2'
     assert (ROOT/'contracts/SIMS_DOCTOR_INTERNAL_LINK_RECOMMENDATION_V1.schema.json').exists()
 
 def test_rc4_example_structured_recommendations():

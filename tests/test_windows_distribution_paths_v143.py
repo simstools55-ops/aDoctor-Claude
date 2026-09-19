@@ -1,7 +1,7 @@
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-ROOT = REPO_ROOT / 'distribution' / 'SIMS-aDoctor-Claude-v1.5.1'
+ROOT = REPO_ROOT / 'distribution' / 'SIMS-aDoctor-Claude-v1.5.2'
 MAX_INTERNAL_PATH = 100
 
 

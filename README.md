@@ -1,10 +1,18 @@
-# aDoctor Claude v1.5.1
+# aDoctor Claude v1.5.2
 
 aDoctorのClaude Project版です。SIMS Managerから受け取った1記事のEvidence Packageを精密診断し、`SIMS_DOCTOR_CASE_RESULT_V2` をSBMへ返します。Writer / Creator / Mergeへの最終紹介状生成はSBMが担当します。
 
 ## Current release
 
-`1.5.1`
+`1.5.2`
+
+
+### v1.5.2
+
+- Added SIMS Request Protocol Gate v1.
+- Requires FULL SIMS Manager request envelope before aDoctor diagnostic execution.
+- Direct/free-form diagnostic requests are blocked with a fixed warning.
+- Gate is explicitly an operational control, not cryptographic authentication.
 
 ### v1.5.1
 

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED = '1.5.1'
+EXPECTED = '1.5.2'
 
 
 def verify(base: Path):

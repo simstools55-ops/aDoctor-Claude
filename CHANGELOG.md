@@ -1,3 +1,8 @@
+## 1.5.2 - 2026-09-19
+- Added SIMS Request Protocol Gate v1 for Manager-origin request enforcement.
+- Added fixed rejection behavior for missing/invalid Manager envelopes.
+- Preserved diagnosis logic and Shared 3.5.0; no License Center dependency added.
+
 ## 1.5.1 - 2026-09-05
 - Added cluster-opportunity diagnosis and aCreator routing for LOW_SAMPLE hard-SERP cases.
 - Added LOW_SAMPLE SERP competitiveness fallback.

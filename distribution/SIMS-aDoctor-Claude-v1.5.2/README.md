@@ -1,12 +1,12 @@
-# aDoctor Claude v1.5.1
+# aDoctor Claude v1.5.2
 
 aDoctorのClaude Project版です。SIMS Managerから受け取った1記事のEvidence Packageを精密診断し、`SIMS_DOCTOR_CASE_RESULT_V2` をSBMへ返します。Writer / Creator / Mergeへの最終紹介状生成はSBMが担当します。
 
 ## Current release
 
-`1.5.1`
+`1.5.2`
 
-### v1.5.1
+### v1.5.2
 
 - LOW_SAMPLE + structurally hard SERP now triggers `CLUSTER_OPPORTUNITY_CHECK` before low-priority closure.
 - Added existing-content support and aCreator opportunity routes.
@@ -431,6 +431,3 @@ The complete Doctor workflow is frozen as a release candidate for end-to-end acc
 
 ## v1.0.1 行動優先型出力
 利用者向け診断は「今回やること」から開始し、利用者が次の担当製品へ直接渡せる依頼文を含みます。
-## v1.5.1 LOW_SAMPLE SERP fallback
-When Search Console evidence is too sparse for a reliable outcome judgment, aDoctor now treats low sample as an evidence limitation rather than treatment failure. It can fall back to target-query SERP competitiveness review, distinguish actionable SERP gaps from sufficient competitiveness or low demand, and return low-demand/low-priority cases as normal close candidates instead of repeatedly rewriting them.
-
